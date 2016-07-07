@@ -15,6 +15,8 @@
  */
 // write your code here
 
+var shoppingCart: [String] = ["Chips", "Salsa", "Guacamole", "Red wine"] //This is an array with Strings.
+
 
 
 
@@ -25,7 +27,7 @@
  */
 // write your code here
 
-
+var numbers: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] //This is an array with integers.
 
 
 
@@ -38,6 +40,10 @@
 
 
 
+for number in numbers { //Iterating over an array
+    print(number)
+}
+
 
 
 
@@ -48,7 +54,9 @@
 // write your code here
 
 
-
+for item in shoppingCart {
+    print("Add \(item) to your cart.")
+}
 
 
 
@@ -58,8 +66,15 @@
  */
 // write your code here
 
+func printItems(items: [String]) {
+    
+    for item in items {
+        print(item)
+    }
+}
 
 
+printItems(shoppingCart)
 
 
 
@@ -70,6 +85,17 @@
 // write your code here
 
 
+func greetFriends(friends: [String]) {
+    
+    for friend in friends {
+        
+        print("Good morning, \(friend)")
+        
+        if friend == "Michael" {
+            print("Top of the morning \(friend)!")
+        }
+    }
+}
 
 
 
@@ -80,6 +106,20 @@
 // write your code here
 
 
+func newFunction(oldArray: [Int]) -> Array<Int> {
+    
+    var under50:[Int] = []
+    
+    for i in oldArray {
+        
+        if i < 50 { // The solution says it should be <= 50, but the directions explicitly request "integers less than 50". i < 50 is correct!
+            
+            under50.append(i)
+        }
+    }
+    
+    return under50
+}
 
 
 
